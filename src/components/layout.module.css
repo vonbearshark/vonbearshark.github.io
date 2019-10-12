@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  background-color: #F5F5F5;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='7 2 75 75'><rect x='10' y='10' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(4,10,10)'/><rect x='13' y='25' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(68,13,25)'/><rect x='13' y='55' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(-18,13,55)'/><rect x='30' y='17' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(-1,30,17)'/><rect x='50' y='12' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(-75,50,12)'/><rect x='35' y='37' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(-10,35,37)'/><rect x='50' y='55' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(40,50,55)'/><rect x='70' y='75' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(-20,70,75)'/><rect x='67' y='57' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(10,67,57)'/><rect x='60' y='42' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(-15,60,42)'/><rect x='12' y='64' width='8' height='2' fill='black' ry='1' rx='1' transform='rotate(60,12,64)'/></svg>");
+  color: #F5F5F5;
+  font-family: "Andale Mono","Lucida Console",monospace;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vh;
+}
+h1 {
+  margin: .5rem;
+}
+h2 {
+  font-size: 35px;
+  font-weight: 400;
+}
+h2, p {
+  background: #d26ead;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-left: 25px;
+  margin: 0;
+  padding: 25px 55px 55px 25px;
+  text-align: left;
+}
+p {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 120;
+}
+a {
+  cursor: pointer;
+  background: linear-gradient(to bottom, transparent 0%, transparent 60%, #00bfb3 60%, #00bfb3 100%);
+  background: -moz-linear-gradient(top, transparent 0%, transparent 60%, #00bfb3 60%, #00bfb3 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 60%, #00bfb3 60%, #00bfb3 100%);
+  background: -o-linear-gradient(top, transparent 0%, transparent 60%, #00bfb3 60%, #00bfb3 100%);
+  background: -ms-linear-gradient(top, transparent 0%, transparent 60%, #00bfb3 60%, #00bfb3 100%);
+  text-decoration: none;
+}
+a:hover {
+  background: linear-gradient(to bottom, transparent 0%, transparent 0%, #00bfb3 0%, #00bfb3 100%);
+  background: -moz-linear-gradient(top, transparent 0%, transparent 0%, #00bfb3 0%, #00bfb3 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, #00bfb3 0%, #00bfb3 100%);
+  background: -o-linear-gradient(top, transparent 0%, transparent 0%, #00bfb3 0%, #00bfb3 100%);
+  background: -ms-linear-gradient(top, transparent 0%, transparent 0%, #00bfb3 0%, #00bfb3 100%);
+}

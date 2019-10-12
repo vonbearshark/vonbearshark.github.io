@@ -1,3 +1,51 @@
-import React from "react"
+import React from 'react';
+import Layout from "../components/layout";
+import Img from 'gatsby-image';
+import { graphql } from 'gatsby'
 
-export default () => <div>Hello world!</div>
+import styles from './index.module.css';
+
+export const query = graphql`
+  query IndexPageQuery {
+    site {
+      siteMetadata {
+        description,
+        email,
+        github,
+        linkedin,
+      }
+    },
+    profile: file(relativePath: { eq: "profile.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 5000) {
+          ...GatsbyImageSharpFluid_withWebp,
+          presentationWidth
+        }
+      }
+    },
+  }
+`;
+export default ({ data }) => <Layout>
+  <header>
+    <div className={styles.profileOuter}>
+      <Img
+        className={styles.profile}
+        title="JJ profile picture"
+        alt="JJ profile picture"
+        fluid={data.profile.childImageSharp.fluid}
+        style={{
+          maxWidth: data.profile.childImageSharp.fluid.presentationWidth,
+        }}/>
+    </div>
+    <h1 className={styles.blended}>
+      <span className={styles.teal}>j</span>
+      <span className={styles.pink}>.</span>
+      <span className={styles.yellow}>j</span>
+      <span className={styles.pink}>.</span>
+    </h1>
+  </header>
+  <section className={styles.about}>
+    <h2>{data.site.siteMetadata.description}</h2>
+    <p>Send me an <a href={`mailto:${data.site.siteMetadata.email}`}>email</a>, connect with me on <a href={`https://www.linkedin.com/in/${data.site.siteMetadata.linkedin}`} target='_blank' rel='noopener noreferrer' alt="JJ's LinkedIn" title="JJ's LinkedIn">LinkedIn</a>, check out my <a href={`https://github.com/${data.site.siteMetadata.github}`} target='_blank' rel='noopener noreferrer' alt="JJ's GitHub" title="JJ's GitHub">GitHub</a>, or download my <a href="jjnaughtonresume.pdf" target='_blank' rel='noopener noreferrer' alt="JJ's resume" title="JJ's resume">resume</a>.</p>
+  </section>
+</Layout>;

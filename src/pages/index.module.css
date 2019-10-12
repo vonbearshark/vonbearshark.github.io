@@ -1,0 +1,42 @@
+.blended {
+  font-family: "Verdana","Geneva",sans-serif;
+  font-size: 250px;
+  transform: skewX(-15deg);
+  opacity: .9;
+}
+.blended span {
+  letter-spacing: -52px;
+  mix-blend-mode: multiply;
+  position: relative;
+}
+.teal {
+  color: #00bfb3;
+}
+.pink {
+  color:#df1b56;
+}
+.yellow {
+  color: #eac141;
+}
+.profileOuter {
+  background: rgb(0,191,179,.9);
+  border-radius: 50%;
+  width: 25vw;
+}
+.profile {
+  border: 3px solid #eac141;
+  border-radius: 50%;
+  margin: .75rem;
+}
+.about {
+  background: rgb(223,27,86, .9);
+  border: 2px solid #000;
+  margin: 0 auto 2vh auto;
+  padding: 25px 55px 55px 25px;
+  width: 90vw;
+}
+@media only screen and (max-width: 850px) {
+  .profileOuter {
+    width: 65vw;
+  }
+}

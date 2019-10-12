@@ -1,0 +1,9 @@
++ ink@2.5.0
++ eslint-plugin-flowtype@2.50.3
++ eslint@6.5.1
++ typescript@3.6.4
++ @typescript-eslint/parser@2.3.3
++ @typescript-eslint/eslint-plugin@2.3.3
+added 36 packages from 15 contributors, removed 1 package, updated 10 packages and audited 25398 packages in 12.646s
+found 0 vulnerabilities
+

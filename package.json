@@ -1,8 +1,13 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "vonbearshark.github.io",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "Full-stack developer and believer in cities, technology, and people.",
+  "version": "2.0.0",
+  "author": "JJ Naughton <jjnaughton93@gmail.com>",
+  "keywords": [
+    "software engineer",
+    "web developer"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -13,18 +18,36 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "gatsby": "^2.13.51",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "eslint": "^6.5.1",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "gatsby": "^2.15.36",
+    "gatsby-cli": "^2.7.58",
+    "gatsby-image": "^2.2.27",
+    "gatsby-plugin-google-analytics": "^2.1.21",
+    "gatsby-plugin-manifest": "^2.2.21",
+    "gatsby-plugin-netlify": "^2.1.19",
+    "gatsby-plugin-offline": "^3.0.14",
+    "gatsby-plugin-react-helmet": "^3.1.11",
+    "gatsby-plugin-sharp": "^2.2.29",
+    "gatsby-source-filesystem": "^2.1.31",
+    "gatsby-transformer-sharp": "^2.2.21",
+    "ink": "^2.5.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
+    "typescript": "^3.6.4"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/vonbearshark/vonbearshark.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/vonbearshark/vonbearshark.github.io/issues"
   }
 }
