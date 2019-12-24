@@ -1,3 +1,30 @@
+main {
+  background: rgb(223,27,86,0.9);
+  border: 2px solid #000;
+  padding: 2vh auto 2vh auto;
+}
+section {
+  margin: 5vh auto 5vh auto;
+  width: 90vw;
+}
+ul {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin-right: 0.75rem;
+}
+li p {
+  margin-top: 0.5rem;
+}
 .blended {
   font-family: "Verdana","Geneva",sans-serif;
   font-size: 250px;
@@ -19,21 +46,14 @@
   color: #eac141;
 }
 .profileOuter {
-  background: rgb(0,191,179,.9);
+  background: rgb(0,191,179,0.9);
   border-radius: 50%;
   width: 25vw;
 }
 .profile {
   border: 3px solid #eac141;
   border-radius: 50%;
-  margin: .75rem;
-}
-.about {
-  background: rgb(223,27,86, .9);
-  border: 2px solid #000;
-  margin: 0 auto 2vh auto;
-  padding: 25px 55px 55px 25px;
-  width: 90vw;
+  margin: 0.75rem;
 }
 @media only screen and (max-width: 850px) {
   .profileOuter {

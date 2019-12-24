@@ -20,7 +20,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.3.3",
     "@typescript-eslint/parser": "^2.3.3",
-    "eslint": "^6.5.1",
+    "eslint": "^6.8.0",
     "eslint-plugin-flowtype": "^2.50.3",
     "gatsby": "^2.15.36",
     "gatsby-cli": "^2.7.58",

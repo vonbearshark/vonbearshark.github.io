@@ -3,11 +3,46 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: `JJ Naughton`,
-    description: `Full-stack developer and believer in cities, technology, and people.`,
+    description: `Full-stack web developer and believer in technology and people.`,
     keywords: `software engineer, web developer`,
     email: `jj@jjnaughton.me`,
     linkedin: `jjnaughton93`,
     github: `vonbearshark`,
+    portfolio: [{
+      description: 'A custom website for the Twin Cities-based pet services small business.',
+      link: 'https://www.eringodog.com/',
+      name: 'Erin Go Dog'
+    },
+    {
+      description: 'Top 10 Reasons Only 90s Kids Believe What This Chrome Browser Extension Does!',
+      link: 'https://chrome.google.com/webstore/detail/infinite-viral/gejghfapdoblkdeghocaggoalocccacg',
+      name: 'Infinite Viral Chrome Extension',
+      repo : 'vonbearshark/infinite-viral-extension'
+    },
+    {
+      description: 'A web visualization for open civic data points on the University of Pittsburgh campus.',
+      link: 'https://pittcsc.org/PantherView/',
+      name: 'Panther View',
+      repo: 'Pitt-CSC/PantherView'
+    },
+    {
+      description: 'A web-GL-based molecular visualizations interface for Pitt Quantum Institute molecular data.',
+      link: 'https://pqr.pitt.edu/',
+      name: 'Pitt Quantum Repository',
+      repo: 'pittquantum/PittQuantumRepository'
+    },
+    {
+      description: 'An Array of Things sensor data pipeline and visualization dashboard.',
+      link: 'http://plenar.io/explore/discover',
+      name: 'Plenar.io',
+      repo: 'UrbanCCD-UChicago/plenario-explorer'
+    },
+    {
+      description: 'An extendable, pure-SVG donut chart React component npm module.',
+      link: 'https://www.npmjs.com/package/react-donut-chart',
+      name: 'React SVG Donut Chart',
+      repo: 'vonbearshark/react-donut-chart'
+    }]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

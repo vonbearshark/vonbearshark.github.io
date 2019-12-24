@@ -22,6 +22,10 @@ h2 {
   font-size: 35px;
   font-weight: 400;
 }
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
 h2, p {
   background: #d26ead;
   letter-spacing: -0.5px;
@@ -51,4 +55,22 @@ a:hover {
   background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, #00bfb3 0%, #00bfb3 100%);
   background: -o-linear-gradient(top, transparent 0%, transparent 0%, #00bfb3 0%, #00bfb3 100%);
   background: -ms-linear-gradient(top, transparent 0%, transparent 0%, #00bfb3 0%, #00bfb3 100%);
+}
+
+h3 a {
+  background: linear-gradient(to bottom, transparent 0%, transparent 60%, #eac141 60%, #eac141 100%);
+  background: -moz-linear-gradient(top, transparent 0%, transparent 60%, #eac141 60%, #eac141 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 60%, #eac141 60%, #eac141 100%);
+  background: -o-linear-gradient(top, transparent 0%, transparent 60%, #eac141 60%, #eac141 100%);
+  background: -ms-linear-gradient(top, transparent 0%, transparent 60%, #eac141 60%, #eac141 100%);
+  color: #F5F5F5;
+  cursor: pointer;
+  text-decoration: none;
+}
+h3 a:hover {
+  background: linear-gradient(to bottom, transparent 0%, transparent 0%, #eac141 0%, #eac141 100%);
+  background: -moz-linear-gradient(top, transparent 0%, transparent 0%, #eac141 0%, #eac141 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, #eac141 0%, #eac141 100%);
+  background: -o-linear-gradient(top, transparent 0%, transparent 0%, #eac141 0%, #eac141 100%);
+  background: -ms-linear-gradient(top, transparent 0%, transparent 0%, #eac141 0%, #eac141 100%);
 }
