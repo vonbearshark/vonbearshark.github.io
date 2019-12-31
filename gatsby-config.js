@@ -3,7 +3,7 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: `JJ Naughton`,
-    description: `Full-stack web developer and believer in technology and people.`,
+    description: `Nobody wins unless everybody wins.`,
     keywords: `software engineer, web developer`,
     email: `jj@jjnaughton.me`,
     linkedin: `jjnaughton93`,
