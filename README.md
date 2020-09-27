@@ -16,13 +16,13 @@ npm start
 
 ## Production
 ```bash
-npm run build && npm run serve
+npm run bundle && npm run serve
 ```
 
-## Test
+## Format
 
 ```bash
-npm test
+npm run format
 ```
 
 Netlify will automatically pick up `master` on changes and deploy it.

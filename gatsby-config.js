@@ -14,6 +14,11 @@ module.exports = {
       name: 'Erin Go Dog'
     },
     {
+      description: 'A custom website for the Minnesota-based dog walking small business.',
+      link: 'https://www.minnesotadogpack.com/',
+      name: 'Minnesota Dog Pack'
+    },
+    {
       description: 'Top 10 Reasons Only 90s Kids Believe What This Chrome Browser Extension Does!',
       link: 'https://chrome.google.com/webstore/detail/infinite-viral/gejghfapdoblkdeghocaggoalocccacg',
       name: 'Infinite Viral Chrome Extension',
