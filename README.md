@@ -15,6 +15,7 @@ npm start
 ```
 
 ## Production
+
 ```bash
 npm run bundle && npm run serve
 ```
