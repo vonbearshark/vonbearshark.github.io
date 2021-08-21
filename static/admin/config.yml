@@ -1,6 +1,6 @@
 backend:
   name: "git-gateway"
-  repo: "vonbearshark/eringodog"
+  repo: "vonbearshark/vonbearshark.github.io"
   branch: "main"
 local_backend: true
 media_folder: "src/images"
