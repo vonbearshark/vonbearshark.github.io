@@ -1,70 +1,30 @@
-import React from "react"
-import Layout from "../components/layout"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import Layout from "../components/layout";
+import { graphql } from "gatsby";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 
-import styles from "./index.module.css"
+import * as styles from "./index.module.css";
+import content from "./index.content.yml";
 
-export const query = graphql`
-  query IndexPageQuery {
-    site {
-      siteMetadata {
-        description
-        email
-        github
-        linkedin
-        portfolio {
-          description
-          link
-          name
-          repo
-        }
-      }
-    }
-    profile: file(relativePath: { eq: "profile.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 5000) {
-          ...GatsbyImageSharpFluid_withWebp
-          presentationWidth
-        }
-      }
-    }
-    portfolioPNGs: allFile(filter: { extension: { eq: "png" } }) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            fixed(width: 300) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-export default ({ data }) => {
-  // Hack: How to do this at the GraphQL query level?
-  const portfolioPNGs = data.portfolioPNGs.edges
-    .flatMap(({ node }) => node)
-    .reduce((imgs, { name, childImageSharp }) => {
-      imgs[name] = childImageSharp
-      return imgs
-    }, {})
+export default function Index({ data }) {
+  const imgsByPath = data?.images?.edges?.reduce(
+    (imgMap, { node }) => ({
+      ...imgMap,
+      [`/src/${node.relativePath}`]: node,
+    }),
+    {}
+  );
 
   return (
     <Layout>
       <header>
         <div className={styles.profileOuter}>
-          <Img
+          <StaticImage
             className={styles.profile}
             title="JJ profile picture"
             alt="JJ profile picture"
-            fluid={data.profile.childImageSharp.fluid}
-            style={{
-              maxWidth: data.profile.childImageSharp.fluid.presentationWidth,
-            }}
+            src="../images/profile.jpg"
           />
         </div>
         <h1 className={styles.blended}>
@@ -76,13 +36,12 @@ export default ({ data }) => {
       </header>
       <main>
         <section>
-          <h2>{data.site.siteMetadata.description}</h2>
+          <ReactMarkdown>{content.metadata.description}</ReactMarkdown>
           <p>
-            Send me an{" "}
-            <a href={`mailto:${data.site.siteMetadata.email}`}>email</a>,
+            Send me an <a href={`mailto:${content.metadata.email}`}>email</a>,
             connect with me on{" "}
             <a
-              href={`https://www.linkedin.com/in/${data.site.siteMetadata.linkedin}`}
+              href={`https://www.linkedin.com/in/${content.metadata.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
               alt="JJ's LinkedIn"
@@ -92,7 +51,7 @@ export default ({ data }) => {
             </a>
             , check out my{" "}
             <a
-              href={`https://github.com/${data.site.siteMetadata.github}`}
+              href={`https://github.com/${content.metadata.github}`}
               target="_blank"
               rel="noopener noreferrer"
               alt="JJ's GitHub"
@@ -115,29 +74,32 @@ export default ({ data }) => {
         </section>
         <section>
           <ul>
-            {data.site.siteMetadata.portfolio.map(
-              ({ description, link, name, repo }) => (
+            {content.portfolio.map(
+              ({ description, image, link, name, repo }) => (
                 <li key={`portfolio-${name}`}>
                   <h3>
-                    <a href={link}>{name}</a>
+                    <a
+                      alt={name}
+                      href={link}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      title={name}
+                    >
+                      {name}
+                    </a>
                   </h3>
-                  <Img
+                  <GatsbyImage
                     alt={name}
+                    image={getImage(imgsByPath[image])}
                     title={name}
-                    fixed={portfolioPNGs[name].fixed}
                   />
-                  <p>
-                    {description}{" "}
-                    {repo && (
-                      <>
-                        Check out the{" "}
-                        <a href={`https://github.com/${repo}`}>
-                          Github repository
-                        </a>
-                        .
-                      </>
-                    )}
-                  </p>
+                  <ReactMarkdown>
+                    {`${description} ${
+                      repo
+                        ? `Check out the [Github repository](https://github.com/${repo}).`
+                        : null
+                    }`}
+                  </ReactMarkdown>
                 </li>
               )
             )}
@@ -145,5 +107,20 @@ export default ({ data }) => {
         </section>
       </main>
     </Layout>
-  )
+  );
 }
+
+export const query = graphql`
+  query IndexQuery {
+    images: allFile(filter: { relativeDirectory: { eq: "images" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+          }
+        }
+      }
+    }
+  }
+`;

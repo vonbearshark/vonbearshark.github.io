@@ -1,31 +1,16 @@
 # vonbearshark.github.io
 
-This is my personal website, written in Gatsby, and deployed on Netlify.
+My personal website, written in Gatsby and deployed on Netlify
 
-## Install
+---
 
-```bash
-npm install
-```
+Install (with `node` and `npm` installed): `npm ci`
 
-## Development
+Dev: `npm start`
+Dev CMS (in another terminal, may require install): `npx netlify-cms-proxy-server`
 
-```bash
-npm start
-```
+Prod: `npm run build && npm run serve`
 
-## Production
+Netlify will automatically pick up `main` on changes and deploy it
 
-```bash
-npm run bundle && npm run serve
-```
-
-## Format
-
-```bash
-npm run format
-```
-
-Netlify will automatically pick up `master` on changes and deploy it.
-
-If you have any questions for me, please, do not hesitate to email me at: jjnaughton93@gmail.com.
+If you have any questions for me, please, do not hesitate to email me at: jjnaughton93@gmail.com
