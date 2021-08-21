@@ -1,25 +1,30 @@
 .blended {
-  font-family: "Verdana","Geneva",sans-serif;
+  font-family: "Verdana", "Geneva", sans-serif;
   font-size: 150px;
   transform: skewX(-15deg);
-  opacity: .9;
+  opacity: 0.9;
 }
+
 .blended span {
   letter-spacing: -25px;
   mix-blend-mode: multiply;
   position: relative;
 }
+
 .teal {
   color: #00bfb3;
 }
+
 .pink {
-  color:#df1b56;
+  color: #df1b56;
 }
+
 .yellow {
   color: #eac141;
 }
+
 .error {
-  background: rgb(223,27,86,.9);
+  background: rgb(223, 27, 86, 0.9);
   border: 2px solid #000;
   margin: 0 auto 2vh auto;
   padding: 25px 55px 55px 25px;

@@ -1,40 +1,25 @@
-import React from "react"
-import Helmet from "react-helmet"
-import PropTypes from "prop-types"
-import { withPrefix } from "gatsby-link"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import Helmet from "react-helmet";
+import { withPrefix } from "gatsby-link";
 
-import "./layout.module.css"
+import content from "../pages/index.content.yml";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(
-    graphql`
-      query LayoutQuery {
-        site {
-          siteMetadata {
-            title
-            description
-            keywords
-            email
-          }
-        }
-      }
-    `
-  )
+import "./layout.module.css";
 
+export default function Layout({ children }) {
   return (
     <>
       <Helmet>
         <html lang="en" />
-        <title>{data.site.siteMetadata.title}</title>
-        <meta property="og:title" content={data.site.siteMetadata.title} />
+        <title>{content.metadata.title}</title>
+        <meta property="og:title" content={content.metadata.title} />
         <meta
           property="og:description"
-          content={data.site.siteMetadata.description}
+          content={content.metadata.description}
         />
         <meta property="og:type" content="website" />
-        <meta name="description" content={data.site.siteMetadata.description} />
-        <meta name="keywords" content={data.site.siteMetadata.keywords} />
+        <meta name="description" content={content.metadata.description} />
+        <meta name="keywords" content={content.metadata.keywords} />
         <link
           rel="shortcut icon"
           href={withPrefix("favicon.ico")}
@@ -43,11 +28,5 @@ const Layout = ({ children }) => {
       </Helmet>
       {children}
     </>
-  )
+  );
 }
-
-Layout.propTypes = {
-  children: PropTypes.array,
-}
-
-export default Layout

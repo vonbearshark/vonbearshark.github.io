@@ -1,0 +1,44 @@
+metadata:
+  title: JJ Naughton
+  description: "## Nobody wins unless everybody wins."
+  keywords: software engineer, web developer
+  email: jj@jjnaughton.me
+  linkedin: jjnaughton93
+  github: vonbearshark
+  resume: /static/jjnaughtonresume.pdf
+portfolio:
+  - description: A custom website for the Twin Cities-based pet services small business.
+    link: https://www.eringodog.com/
+    name: Erin Go Dog
+    image: /src/images/Erin Go Dog.png
+  - name: Minnesota Dog Pack
+    description: A custom website for the Minnesota-based dog walking small business.
+    link: https://www.minnesotadogpack.com/
+    image: /src/images/Minnesota Dog Pack.png
+  - description: Top 10 Reasons Only 90s Kids Believe What This Chrome Browser
+      Extension Does!
+    name: Infinite Viral Chrome Extension
+    repo: vonbearshark/infinite-viral-extension
+    link: https://chrome.google.com/webstore/detail/infinite-viral/gejghfapdoblkdeghocaggoalocccacg
+    image: /src/images/Infinite Viral Chrome Extension.png
+  - name: Panther View
+    repo: Pitt-CSC/PantherView
+    description: A web visualization for open civic data points on the University of
+      Pittsburgh campus.
+    link: https://pittcsc.org/PantherView/
+    image: /src/images/Panther View.png
+  - name: Pitt Quantum Repository
+    description: A web-GL-based molecular visualizations interface for Pitt Quantum
+      Institute molecular data.
+    link: https://pqr.pitt.edu/
+    image: /src/images/Pitt Quantum Repository.png
+  - name: Plenar.io
+    repo: UrbanCCD-UChicago/plenario-explorer
+    link: http://plenar.io/explore/discover
+    description: An Array of Things sensor data pipeline and visualization dashboard.
+    image: /src/images/Plenar.io.png
+  - name: React SVG Donut Chart
+    repo: vonbearshark/react-donut-chart
+    link: https://www.npmjs.com/package/react-donut-chart
+    description: An extendable, pure-SVG donut chart React component npm module.
+    image: /src/images/React SVG Donut Chart.png

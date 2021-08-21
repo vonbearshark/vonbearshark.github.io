@@ -1,0 +1,72 @@
+backend:
+  name: "git-gateway"
+  repo: "vonbearshark/eringodog"
+  branch: "main"
+local_backend: true
+media_folder: "src/images"
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - {
+          name: "index",
+          label: "Main Page",
+          file: "src/pages/index.content.yml",
+          fields:
+            [
+              {
+                label: "Metadata",
+                name: "metadata",
+                widget: "object",
+                collapsed: false,
+                fields:
+                  [
+                    { label: "Tile", name: "title", widget: "string" },
+                    {
+                      label: "Description",
+                      name: "description",
+                      widget: "markdown",
+                    },
+                    { label: "Keywords", name: "keywords", widget: "string" },
+                    { label: "Email", name: "email", widget: "string" },
+                    { label: "LinkedIn", name: "linkedin", widget: "string" },
+                    { label: "GitHub", name: "github", widget: "string" },
+                    {
+                      allow_multiple: false,
+                      label: "Resume",
+                      media_folder: "/static",
+                      name: "resume",
+                      widget: "file",
+                    },
+                  ],
+              },
+              {
+                label: "Portfolio",
+                name: "portfolio",
+                widget: "list",
+                collapsed: false,
+                fields:
+                  [
+                    { label: "Name", name: "name", widget: "string" },
+                    {
+                      label: "Description",
+                      name: "description",
+                      widget: "markdown",
+                    },
+                    { label: "Link", name: "link", widget: "string" },
+                    {
+                      label: "Repo",
+                      name: "repo",
+                      widget: "string",
+                      required: false,
+                    },
+                    {
+                      allow_multiple: false,
+                      label: "Image",
+                      name: "image",
+                      widget: "image",
+                    },
+                  ],
+              },
+            ],
+        }
