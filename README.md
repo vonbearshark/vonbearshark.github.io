@@ -2,8 +2,6 @@
 
 My personal website, written in Gatsby and deployed on Netlify
 
----
-
 Install (with `node` and `npm` installed): `npm ci`
 
 Dev: `npm start`
