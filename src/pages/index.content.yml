@@ -10,18 +10,14 @@ portfolio:
   - name: OPO Data
     link: https://opodata.org/
     image: /src/images/opodata.png
-    description: >-
-      Organ procurement organizations (OPOs) are federal contractors in charge
-      of coordinating the recovery of transplantable organs from medically
-      eligible organ donors in their region. An astounding lack of
+    description: Organ procurement organizations (OPOs) are federal contractors in
+      charge of coordinating the recovery of transplantable organs from
+      medically eligible organ donors in their region. An astounding lack of
       accountability and oversight in the nation’s creaking, monopolistic organ
       transplant system is allowing hundreds of thousands of potential organ
       donations to fall through the cracks. Patients of color are less likely to
       receive organ transplants than white patients because of inferior OPO
       service.
-
-
-      This site, developed with Bloom, visualizes OPO performance as a tool for advocating for improvement.
   - description: A custom website for the Twin Cities-based pet services small business.
     link: https://www.eringodog.com/
     name: Erin Go Dog
