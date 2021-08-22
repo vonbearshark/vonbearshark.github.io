@@ -94,10 +94,10 @@ export default function Index({ data }) {
                     title={name}
                   />
                   <ReactMarkdown>
-                    {`${description} ${
+                    {`${description}${
                       repo
-                        ? `Check out the [Github repository](https://github.com/${repo}).`
-                        : null
+                        ? ` Check out the [Github repository](https://github.com/${repo}).`
+                        : ''
                     }`}
                   </ReactMarkdown>
                 </li>
